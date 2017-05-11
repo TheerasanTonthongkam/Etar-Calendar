@@ -19,9 +19,9 @@
 -->
 <resources>
 
-    <color name="colorPrimary">#41c3b1</color>
-    <color name="colorPrimaryDark">#388d7f</color>
-    <color name="colorAccent">#1dc1ab</color>
+    <color name="colorPrimary">#4198c3</color>
+    <color name="colorPrimaryDark">#386b8d</color>
+    <color name="colorAccent">#1d59c1</color>
     <color name="titleTextColor">@android:color/white</color>
 
     <color name="pressed">#330066ff</color>
@@ -64,7 +64,7 @@
     <color name="month_day_number">#FF555555</color>
     <color name="month_mini_day_number">#FF000000</color>
     <color name="month_day_number_other">#FF999999</color>
-    <color name="month_week_num_color">#41c3b1</color>
+    <color name="month_week_num_color">#419ac3</color>
     <color name="month_day_names_color">#757575</color>
     <color name="month_today_number">#FF555555</color>
     <color name="month_event_color">#FF333333</color>
@@ -78,14 +78,14 @@
 
     <!-- Background Color of the selected week for the mini calendar on the tablet size -->
     <color name="month_selected_week_bgcolor">#FFDDDDDD</color>
-    <color name="month_today_bgcolor">#25a2ff00</color>
+    <color name="month_today_bgcolor">#250073ff</color>
     <color name="month_focus_month_bgcolor">#FFFFFFFF</color>
     <color name="month_bgcolor">#FFF2F2F2</color>
     <color name="month_other_bgcolor">#FFEEEEEE</color>
 
     <color name="month_dna_conflict_time_color">#FF333333</color>
 
-    <color name="event_center">#ff6bd697</color>
+    <color name="event_center">#6b9bd6</color>
     <color name="edit_event_separator">#FFDDDDDD</color>
     <color name="edit_event_small">#000000</color>
 
@@ -191,7 +191,7 @@
     <color name="month_other_month_day_number_dark">#ff939497</color>
     <color name="month_grid_lines_dark">#ffdedede</color>
     <color name="mini_month_today_outline_color_dark">#FF000000</color>
-    <color name="month_week_num_color_dark">#41c3b1</color>
+    <color name="month_week_num_color_dark">#416cc3</color>
 
     <!-- Dark Color DayView -->
     <color name="week_today_dark">#90caf9</color>
