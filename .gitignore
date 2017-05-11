@@ -30,3 +30,7 @@ proguard/
 
 # Android Studio captures folder
 captures/
+Etar-Calendar.iml
+external/external.iml
+gradle/wrapper/gradle-wrapper.jar
+gradle/wrapper/gradle-wrapper.properties
