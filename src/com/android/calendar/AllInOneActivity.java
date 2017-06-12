@@ -359,8 +359,8 @@ public class AllInOneActivity extends AbstractCalendarActivity implements EventH
         mFab = (FloatingActionButton) findViewById(R.id.floating_action_button);
 
         if (mIsTabletConfig) {
-            mDateRange = (TextView) findViewById(R.id.date_bar);
-            mWeekTextView = (TextView) findViewById(R.id.week_num);
+            //mDateRange = (TextView) findViewById(R.id.date_bar);
+            //mWeekTextView = (TextView) findViewById(R.id.week_num);
         } else {
             mDateRange = (TextView) getLayoutInflater().inflate(R.layout.date_range_title, null);
         }
@@ -813,20 +813,20 @@ public class AllInOneActivity extends AbstractCalendarActivity implements EventH
         // Hide the "show/hide controls" button if this is a phone
         // or the view type is "Month" or "Agenda".
 
-        mControlsMenu = menu.findItem(R.id.action_hide_controls);
-        if (!mShowCalendarControls) {
-            if (mControlsMenu != null) {
-                mControlsMenu.setVisible(false);
-                mControlsMenu.setEnabled(false);
-            }
-        } else if (mControlsMenu != null && mController != null
-                && (mController.getViewType() == ViewType.MONTH ||
-                mController.getViewType() == ViewType.AGENDA)) {
-            mControlsMenu.setVisible(false);
-            mControlsMenu.setEnabled(false);
-        } else if (mControlsMenu != null) {
-            mControlsMenu.setTitle(mHideControls ? mShowString : mHideString);
-        }
+//        mControlsMenu = menu.findItem(R.id.action_hide_controls);
+//        if (!mShowCalendarControls) {
+//            if (mControlsMenu != null) {
+//                mControlsMenu.setVisible(false);
+//                mControlsMenu.setEnabled(false);
+//            }
+//        } else if (mControlsMenu != null && mController != null
+//                && (mController.getViewType() == ViewType.MONTH ||
+//                mController.getViewType() == ViewType.AGENDA)) {
+//            mControlsMenu.setVisible(false);
+//            mControlsMenu.setEnabled(false);
+//        } else if (mControlsMenu != null) {
+//            mControlsMenu.setTitle(mHideControls ? mShowString : mHideString);
+//        }
 
         MenuItem menuItem = menu.findItem(R.id.action_today);
         if (Utils.isJellybeanOrLater()) {
@@ -877,24 +877,26 @@ public class AllInOneActivity extends AbstractCalendarActivity implements EventH
             }, t.year, t.month, t.monthDay);
             datePickerDialog.show(getFragmentManager(), "datePickerDialog");
 
-        } else if (itemId == R.id.action_hide_controls) {
-            mHideControls = !mHideControls;
-            Utils.setSharedPreference(
-                    this, GeneralPreferences.KEY_SHOW_CONTROLS, !mHideControls);
-            item.setTitle(mHideControls ? mShowString : mHideString);
-            if (!mHideControls) {
-                mMiniMonth.setVisibility(View.VISIBLE);
-                mCalendarsList.setVisibility(View.VISIBLE);
-                mMiniMonthContainer.setVisibility(View.VISIBLE);
-            }
-            final ObjectAnimator slideAnimation = ObjectAnimator.ofInt(this, "controlsOffset",
-                    mHideControls ? 0 : mControlsAnimateWidth,
-                    mHideControls ? mControlsAnimateWidth : 0);
-            slideAnimation.setDuration(mCalendarControlsAnimationTime);
-            ObjectAnimator.setFrameDelay(0);
-            slideAnimation.start();
-            return true;
-        } else if (itemId == R.id.action_search) {
+        }
+//        else if (itemId == R.id.action_hide_controls) {
+//            mHideControls = !mHideControls;
+//            Utils.setSharedPreference(
+//                    this, GeneralPreferences.KEY_SHOW_CONTROLS, !mHideControls);
+//            item.setTitle(mHideControls ? mShowString : mHideString);
+//            if (!mHideControls) {
+//                mMiniMonth.setVisibility(View.VISIBLE);
+//                mCalendarsList.setVisibility(View.VISIBLE);
+//                mMiniMonthContainer.setVisibility(View.VISIBLE);
+//            }
+//            final ObjectAnimator slideAnimation = ObjectAnimator.ofInt(this, "controlsOffset",
+//                    mHideControls ? 0 : mControlsAnimateWidth,
+//                    mHideControls ? mControlsAnimateWidth : 0);
+//            slideAnimation.setDuration(mCalendarControlsAnimationTime);
+//            ObjectAnimator.setFrameDelay(0);
+//            slideAnimation.start();
+//            return true;
+//        }
+        else if (itemId == R.id.action_search) {
             return false;
         } else if (itemId == R.id.action_import) {
             ImportActivity.pickImportFile(this);
@@ -929,13 +931,13 @@ public class AllInOneActivity extends AbstractCalendarActivity implements EventH
                     mController.sendEvent(this, EventType.GO_TO, null, null, -1, ViewType.AGENDA);
                 }
                 break;
-            case R.id.action_select_visible_calendars:
-                mController.sendEvent(this, EventType.LAUNCH_SELECT_VISIBLE_CALENDARS, null, null,
-                        0, 0);
-                break;
-            case R.id.action_settings:
-                mController.sendEvent(this, EventType.LAUNCH_SETTINGS, null, null, 0, 0);
-                break;
+//            case R.id.action_select_visible_calendars:
+//                mController.sendEvent(this, EventType.LAUNCH_SELECT_VISIBLE_CALENDARS, null, null,
+//                        0, 0);
+//                break;
+//            case R.id.action_settings:
+//                mController.sendEvent(this, EventType.LAUNCH_SETTINGS, null, null, 0, 0);
+//                break;
         }
         mDrawerLayout.closeDrawers();
         return false;

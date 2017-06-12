@@ -14,14 +14,15 @@
      limitations under the License.
 -->
 
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/edit_event"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     style="@style/EditEvent_Layout"
     android:background="?attr/edit_event_bgcolor">
     <TextView
+        tools:visibility="gone"
         android:id="@+id/loading_message"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -33,6 +34,7 @@
         android:background="?attr/edit_event_bgcolor"/>
 
     <ScrollView
+        tools:visibility="visible"
         android:id="@+id/scroll_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

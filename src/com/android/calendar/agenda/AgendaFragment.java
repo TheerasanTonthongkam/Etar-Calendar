@@ -225,15 +225,6 @@ public class AgendaFragment extends Fragment implements CalendarController.Event
             mAgendaListView.goTo(mTime, -1, mQuery, true, false);
         }
         mAgendaListView.onResume();
-
-//        // Register for Intent broadcasts
-//        IntentFilter filter = new IntentFilter();
-//        filter.addAction(Intent.ACTION_TIME_CHANGED);
-//        filter.addAction(Intent.ACTION_DATE_CHANGED);
-//        filter.addAction(Intent.ACTION_TIMEZONE_CHANGED);
-//        registerReceiver(mIntentReceiver, filter);
-//
-//        mContentResolver.registerContentObserver(Events.CONTENT_URI, true, mObserver);
     }
 
     @Override
@@ -302,12 +293,6 @@ public class AgendaFragment extends Fragment implements CalendarController.Event
         super.onPause();
 
         mAgendaListView.onPause();
-
-//        mContentResolver.unregisterContentObserver(mObserver);
-//        unregisterReceiver(mIntentReceiver);
-
-        // Record Agenda View as the (new) default detailed view.
-//        Utils.setDefaultView(this, CalendarApplication.AGENDA_VIEW_ID);
     }
 
     private void goTo(EventInfo event, boolean animate) {

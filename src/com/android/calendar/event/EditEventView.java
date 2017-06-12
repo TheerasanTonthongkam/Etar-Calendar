@@ -242,7 +242,7 @@ public class EditEventView implements View.OnClickListener, DialogInterface.OnCa
         mTitleTextView = (TextView) view.findViewById(R.id.title);
         mLocationTextView = (AutoCompleteTextView) view.findViewById(R.id.location);
         mDescriptionTextView = (TextView) view.findViewById(R.id.description);
-        mTimezoneLabel = (TextView) view.findViewById(R.id.timezone_label);
+//        mTimezoneLabel = (TextView) view.findViewById(R.id.timezone_label);
         mStartDateButton = (Button) view.findViewById(R.id.start_date);
         mEndDateButton = (Button) view.findViewById(R.id.end_date);
         mWhenView = (TextView) mView.findViewById(R.id.when);
@@ -266,7 +266,7 @@ public class EditEventView implements View.OnClickListener, DialogInterface.OnCa
         mAvailabilitySpinner = (Spinner) view.findViewById(R.id.availability);
         mAccessLevelSpinner = (Spinner) view.findViewById(R.id.visibility);
         mCalendarSelectorGroup = view.findViewById(R.id.calendar_selector_group);
-        mCalendarSelectorWrapper = view.findViewById(R.id.calendar_selector_wrapper);
+//        mCalendarSelectorWrapper = view.findViewById(R.id.calendar_selector_wrapper);
         mCalendarStaticGroup = view.findViewById(R.id.calendar_group);
         mRemindersGroup = view.findViewById(R.id.reminders_row);
         mResponseGroup = view.findViewById(R.id.response_row);
@@ -1007,8 +1007,8 @@ public class EditEventView implements View.OnClickListener, DialogInterface.OnCa
     public void updateHeadlineColor(CalendarEventModel model, int displayColor) {
         if (model.mUri != null) {
             if (mIsMultipane) {
-                mView.findViewById(R.id.calendar_textview_with_colorpicker)
-                    .setBackgroundColor(displayColor);
+//                mView.findViewById(R.id.calendar_textview_with_colorpicker)
+//                    .setBackgroundColor(displayColor);
             } else {
                 mView.findViewById(R.id.calendar_group).setBackgroundColor(displayColor);
             }

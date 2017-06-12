@@ -2215,8 +2215,8 @@ public class EventInfoFragment extends DialogFragment implements OnCheckedChange
     }
 
     private void setDialogSize(Resources r) {
-        mDialogWidth = (int)r.getDimension(R.dimen.event_info_dialog_width);
-        mDialogHeight = (int)r.getDimension(R.dimen.event_info_dialog_height);
+//        mDialogWidth = (int)r.getDimension(R.dimen.event_info_dialog_width);
+//        mDialogHeight = (int)r.getDimension(R.dimen.event_info_dialog_height);
     }
 
     @Override
