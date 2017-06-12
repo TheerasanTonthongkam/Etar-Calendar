@@ -931,13 +931,6 @@ public class AllInOneActivity extends AbstractCalendarActivity implements EventH
                     mController.sendEvent(this, EventType.GO_TO, null, null, -1, ViewType.AGENDA);
                 }
                 break;
-//            case R.id.action_select_visible_calendars:
-//                mController.sendEvent(this, EventType.LAUNCH_SELECT_VISIBLE_CALENDARS, null, null,
-//                        0, 0);
-//                break;
-//            case R.id.action_settings:
-//                mController.sendEvent(this, EventType.LAUNCH_SETTINGS, null, null, 0, 0);
-//                break;
         }
         mDrawerLayout.closeDrawers();
         return false;
